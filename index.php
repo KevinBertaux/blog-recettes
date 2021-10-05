@@ -1,5 +1,6 @@
 <?php include('header.php'); ?>
 
+Hello
         <section class="about">
             <div class="container">
                 <h1>Un blog de recettes simples</h1>
