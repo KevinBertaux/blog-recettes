@@ -1,6 +1,5 @@
-<?php include('header.php'); ?>
+<?php get_header(); ?>
 
-Hello
         <section class="about">
             <div class="container">
                 <h1>Un blog de recettes simples</h1>
@@ -186,4 +185,4 @@ Hello
             </div>
         </section>
 
-<?php include('footer.php'); ?>
+<?php get_footer(); ?>
