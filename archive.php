@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<h1>SINGLE BLOG</h1>
+<h1>ARCHIVE BLOG</h1>
+
 <?php if (have_posts()) {
     while (have_posts()) {
         the_post();

@@ -2,8 +2,8 @@
 
 <h1>ARCHIVE RECETTE</h1>
 
-<?php if(have_posts()) {
-    while(have_posts()) {
+<?php if (have_posts()) {
+    while (have_posts()) {
         the_post();
         the_title();
     }
