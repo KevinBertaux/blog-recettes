@@ -22,11 +22,7 @@
             'fallback_cb' => false,
             'depth' => 1
         )); ?>
-        <form action="search.html" class="search-form">
-            <label for="search" class="sr-only">Rechercher</label>
-            <input type="search" id="search" placeholder="Recherche ...">
-            <button type="submit">Ok</button>
-        </form>
+        <?php get_search_form(); ?>
     </div>
 </header>
 <main class="main-content">
