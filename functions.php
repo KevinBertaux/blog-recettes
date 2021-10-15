@@ -1,5 +1,18 @@
 <?php
 
+function ecfwp_setup_theme() {
+    /* Activation de la gestion du <title> par WordPress */
+    add_theme_support('title-tag');
+
+    /* Activation du support des images mises en avant */
+    add_theme_support('post-thumbnails');
+
+    /* Définition des tailles d'images personnalisées */
+    add_image_size( 'card-blog', 320, 480, true );
+    add_image_size( 'image-blog', 1020, 680, true );
+}
+add_action('after_setup_theme', 'ecfwp_setup_theme');
+
 function ecfwp_enqueue_stylesheets_and_scripts()
 {
     wp_enqueue_style('reset', get_template_directory_uri() . '/css/reset.css', [], '1.0');

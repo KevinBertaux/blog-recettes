@@ -1,5 +1,3 @@
 <?php get_header(); ?>
-
-<h1>SINGLE</h1>
-
+<?php get_template_part('parts/singular-loop'); ?>
 <?php get_footer(); ?>
