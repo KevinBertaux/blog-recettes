@@ -10,8 +10,8 @@
                     <div class="post-header-content">
                         <h1 class="post-title"><?php the_title(); ?></h1>
                         <ul class="post-meta-list">
-                            <li class="post-meta-item date">Article publié le 6 septembre 2021</li>
-                            <li class="post-meta-item quantity">dans <a href="category.html">Tips</a></li>
+                            <li class="post-meta-item date">Article publié le <?php the_date('d F Y'); ?></li>
+                            <li class="post-meta-item quantity">dans <?php the_category(', '); ?></li>
                         </ul>
                     </div>
                 </div>
