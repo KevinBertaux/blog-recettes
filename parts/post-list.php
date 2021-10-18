@@ -14,28 +14,40 @@
             <?php while (have_posts()) {
                 the_post(); ?>
                 <article class="card">
-
                     <?php the_post_thumbnail('card-blog', ['class' => 'card-illustration']); ?>
                     <div class="card-content">
-                        <?php $termList = get_the_category_list();
-                        var_dump($termList);
-                        ?>
+                        <ul class="card-terms-list">
+                            <?php
+                            $cats = get_the_category();
+                            $siteUrl = site_url();
+                            foreach ($cats as $cat) {
+                                echo
+                                    '<li class="card-terms-item"><a href="' .
+                                    $siteUrl .
+                                    '/' .
+                                    $cat->taxonomy .
+                                    '/' .
+                                    $cat->slug .
+                                    '" class="card-terms-link">' .
+                                    $cat->name .
+                                    '</a></li>';
+                            } ?>
+                        </ul>
                         <h2 class="card-title"><?php the_title(); ?></h2>
                         <?php the_excerpt(); ?>
                     </div>
-                    <a href="<?php the_permalink(); ?>" class="card-link">Lire la suite
-                        <img loading="lazy"
-                             src="<?php echo get_template_directory_uri(); ?>/img/icon-arrow-right.svg" alt=""
-                             aria-hidden="true">
-                    </a>
+                    <a href="<?php the_permalink(); ?>" class="card-link">Lire l'article</a>
                 </article>
             <?php } ?>
         </div>
     <?php } else { ?>
         <h1 class="section-title">Désolé, aucun contenu n'a été publié ici.</h1>
     <?php } ?>
-    <?php the_posts_pagination(array(
-        'prev_text' => '&Lt; <span class="screen-reader-text">Précédent</span>',
-        'next_text' => '&Gt; <span class="screen-reader-text">Suivant</span>',
-    )); ?>
+    <nav class="pagination">
+    <?php
+        echo paginate_links([
+        'prev_text' => 'Page précédente <span class="screen-reader-text">Précédent</span>',
+        'next_text' => 'Page suivante <span class="screen-reader-text">Suivant</span>',
+    ]); ?>
+    </nav>
 </div>

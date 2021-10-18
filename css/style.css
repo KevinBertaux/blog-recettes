@@ -299,7 +299,7 @@ a.page-numbers:focus,
 }
 
 .card-terms-item:not(:last-child)::after {
-    content: '-';
+    content: ' -';
     margin-right: 0.5rem;
 }
 
