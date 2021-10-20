@@ -34,7 +34,7 @@
                             } ?>
                         </ul>
                         <h2 class="card-title"><?php the_title(); ?></h2>
-                        <?php the_excerpt(); ?>
+                        <?php echo get_the_excerpt() . ' [...]'?>
                     </div>
                     <a href="<?php the_permalink(); ?>" class="card-link">Lire l'article</a>
                 </article>

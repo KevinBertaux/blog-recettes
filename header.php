@@ -13,7 +13,7 @@
 <header class="main-header">
     <div class="container">
         <div class="logo">Mes recettes</div>
-        <?php wp_nav_menu(array(
+        <?php wp_nav_menu([
             'theme_location' => 'main',
             'menu_id' => 'main-menu',
             'container' => 'nav',
@@ -21,7 +21,7 @@
             'add_link_class' => 'menu-link',
             'fallback_cb' => false,
             'depth' => 1
-        )); ?>
+        ]); ?>
         <?php get_search_form(); ?>
     </div>
 </header>

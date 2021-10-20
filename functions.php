@@ -1,6 +1,7 @@
 <?php
 
-function ecfwp_setup_theme() {
+function ecfwp_setup_theme()
+{
     /* Activation de la gestion du <title> par WordPress */
     add_theme_support('title-tag');
 
@@ -8,9 +9,10 @@ function ecfwp_setup_theme() {
     add_theme_support('post-thumbnails');
 
     /* Définition des tailles d'images personnalisées */
-    add_image_size( 'card-blog', 320, 480, true );
-    add_image_size( 'image-blog', 1020, 680, true );
+    add_image_size('card-blog', 320, 480, true);
+    add_image_size('image-blog', 1020, 680, true);
 }
+
 add_action('after_setup_theme', 'ecfwp_setup_theme');
 
 function ecfwp_enqueue_stylesheets_and_scripts()
@@ -31,6 +33,15 @@ function ecfwp_register_menus()
 }
 
 add_action('init', 'ecfwp_register_menus');
+
+/* Limit max menu depth in admin panel to 1 */
+function ecfwp_limit_depth( $hook ) {
+    if ( $hook != 'nav-menus.php' ) return;
+
+    // override default value right after 'nav-menu' JS
+    wp_add_inline_script( 'nav-menu', 'wpNavMenu.options.globalMaxDepth = 0;', 'after' );
+}
+add_action( 'admin_enqueue_scripts', 'ecfwp_limit_depth' );
 
 function ecfwp_menu_add_class($classes, $item, $args)
 {
