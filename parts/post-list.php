@@ -34,7 +34,9 @@
                             } ?>
                         </ul>
                         <h2 class="card-title"><?php the_title(); ?></h2>
-                        <?php echo get_the_excerpt() . ' [...]'?>
+                        <p class="card-excerpt">
+                            <?php echo wp_trim_words(get_the_content(), 20, ' [...]'); ?>
+                        </p>
                     </div>
                     <a href="<?php the_permalink(); ?>" class="card-link">Lire l'article</a>
                 </article>
@@ -44,10 +46,10 @@
         <h1 class="section-title">Désolé, aucun contenu n'a été publié ici.</h1>
     <?php } ?>
     <nav class="pagination">
-    <?php
+        <?php
         echo paginate_links([
-        'prev_text' => 'Page précédente <span class="screen-reader-text">Précédent</span>',
-        'next_text' => 'Page suivante <span class="screen-reader-text">Suivant</span>',
-    ]); ?>
+            'prev_text' => 'Page précédente <span class="screen-reader-text">Précédent</span>',
+            'next_text' => 'Page suivante <span class="screen-reader-text">Suivant</span>',
+        ]); ?>
     </nav>
 </div>
