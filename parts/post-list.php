@@ -35,7 +35,13 @@
                         </ul>
                         <h2 class="card-title"><?php the_title(); ?></h2>
                         <p class="card-excerpt">
-                            <?php echo wp_trim_words(get_the_content(), 20, ' [...]'); ?>
+                            <?php
+                            if (get_the_excerpt()) {
+                                echo wp_trim_words(get_the_excerpt() . ' [...]', 20, ' [...]');
+                            } else {
+                                echo wp_trim_words(get_the_content() . ' [...]', 20, ' [...]');
+                            }
+                            ?>
                         </p>
                     </div>
                     <a href="<?php the_permalink(); ?>" class="card-link">Lire l'article</a>
