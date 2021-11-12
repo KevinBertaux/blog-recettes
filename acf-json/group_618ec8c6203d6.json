@@ -1,0 +1,109 @@
+{
+    "key": "group_618ec8c6203d6",
+    "title": "En-tête",
+    "fields": [
+        {
+            "key": "field_618ec9d74528d",
+            "label": "Qu'affiche l'en-tête",
+            "name": "switch_logo_title",
+            "type": "select",
+            "instructions": "Choisir un titre pour le site ou un logo",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "30",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "1": "Le nom du site",
+                "2": "Un texte",
+                "3": "Une image"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_618ec8d94528b",
+            "label": "Logo du site",
+            "name": "site_logo",
+            "type": "image",
+            "instructions": "Taille maximal : 120px x 50px",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_618ec9d74528d",
+                        "operator": "==",
+                        "value": "3"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "preview_size": "full",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": 120,
+            "max_height": 50,
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_618ec9b14528c",
+            "label": "Titre du site",
+            "name": "site_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_618ec9d74528d",
+                        "operator": "==",
+                        "value": "2"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "70",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-general"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1636751949
+}

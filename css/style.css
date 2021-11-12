@@ -212,6 +212,17 @@ a.page-numbers:focus,
     font-size: 3.2rem;
 }
 
+.logo-link {
+    padding: 0 !important;
+    color: var(--grey-400) !important;
+}
+
+.logo-link:hover,
+.logo-link:focus,
+.logo-link.active {
+    color: var(--grey-200) !important;
+}
+
 /* Search form */
 
 .search-form {

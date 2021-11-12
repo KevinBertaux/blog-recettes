@@ -18,8 +18,8 @@ La différence est qu'elle est gratuite et qu'elle ne se manipule pas via une in
 
 ### Aller plus loin
 
-    L'auteur peut définir un logo. Si c'est le cas, il s'affiche à la place du nom du site.
-    La taille max du logo sera de 120x50.
+    L'auteur peut définir un logo. Si c'est le cas, il s'affiche à la place du nom du site. ✅
+    La taille max du logo sera de 120x50. ✅
     Le menu ne peut pas avoir de sous-menu. ✅
 
 ## Le pied de page
