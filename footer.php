@@ -2,8 +2,11 @@
 <footer class="main-footer">
     <div class="container">
         <div class="copyright">Copyright &copy;
-            <?php bloginfo('name');
-            echo ' ' . get_field('annee', 'option'); ?>
+            <?php
+            $currentYear = get_the_date('Y');
+            bloginfo('name');
+            echo ' ' . $currentYear;
+            ?>
         </div>
         <?php
         wp_nav_menu([

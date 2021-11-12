@@ -33,7 +33,16 @@
                                     '</a></li>';
                             } ?>
                         </ul>
-                        <h2 class="card-title"><?php the_title(); ?></h2>
+                        <h2 class="card-title">
+                            <?php
+                            if (get_field('short_blog_title')) {
+                                the_field('short_blog_title');
+                            } else {
+                                the_title();
+                            }
+                            ?>
+                        </h2>
+
                         <p class="card-excerpt">
                             <?php
                             if (get_the_excerpt()) {

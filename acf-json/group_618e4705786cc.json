@@ -1,14 +1,14 @@
 {
-    "key": "group_615c3b8097ea1",
-    "title": "Copyright",
+    "key": "group_618e4705786cc",
+    "title": "Blog",
     "fields": [
         {
-            "key": "field_615c3be046d49",
-            "label": "Année",
-            "name": "annee",
+            "key": "field_618e4736fe1fa",
+            "label": "Titre court",
+            "name": "short_blog_title",
             "type": "text",
-            "instructions": "",
-            "required": 1,
+            "instructions": "Un titre plus court pour la page \"Blog\"",
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -25,9 +25,9 @@
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "post_type",
                 "operator": "==",
-                "value": "acf-options-general"
+                "value": "post"
             }
         ]
     ],
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1633546002
+    "modified": 1636736602
 }
