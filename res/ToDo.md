@@ -14,28 +14,28 @@ La différence est qu'elle est gratuite et qu'elle ne se manipule pas via une in
 
 ## L'en-tête
 
-    Il est constitué du nom du site, de la navigation principale, du moteur de recherche. ✅
+    ✅ Il est constitué du nom du site, de la navigation principale, du moteur de recherche.
 
 ### Aller plus loin
 
-    L'auteur peut définir un logo. Si c'est le cas, il s'affiche à la place du nom du site. ✅
-    La taille max du logo sera de 120x50. ✅
-    Le menu ne peut pas avoir de sous-menu. ✅
+    ✅ L'auteur peut définir un logo. Si c'est le cas, il s'affiche à la place du nom du site.
+    ✅ La taille max du logo sera de 120x50.
+    ✅ Le menu ne peut pas avoir de sous-menu.
 
 ## Le pied de page
 
-    Il est constitué d'un copyright, d'une navigation et d'une liste de réseaux sociaux. ✅
-    Le copyright est constitué du nom du site et de l'année en cours (dynamique). ✅
-    Les réseaux sociaux s'ouvrent dans un nouvel onglet. ✅
+    ✅ Il est constitué d'un copyright, d'une navigation et d'une liste de réseaux sociaux.
+    ✅ Le copyright est constitué du nom du site et de l'année en cours (dynamique).
+    ✅ Les réseaux sociaux s'ouvrent dans un nouvel onglet.
 
 ## Page index.html : la page d'accueil
 
 Ce modèle est constitué de :
 
-    Une section d'introduction entièrement administrable dont le lien ne peut renvoyer que sur des contenus internes du site,
-    Une section affichant les trois derniers articles du blog
+    Une section d'introduction entièrement administrable dont le lien ne peut renvoyer que sur des contenus internes du site.
+    Une section affichant les trois derniers articles du blog.
     Une section affichant six recettes populaires.
-    Ces recettes sont sélectionnées par l'auteur du site
+    Ces recettes sont sélectionnées par l'auteur du site.
     Une section permettant de s'abonner à la newsletter.
     Le lien renvoie vers un service externe permettant de s'abonner type mailchimp (il s'agit juste d'entrer le lien vers ce service).
     Cette section est entièrement administrable.
@@ -44,9 +44,12 @@ Ce modèle est constitué de :
 
 ### Aller plus loin
 
-    On peut choisir le nombre d'articles à afficher dans la section derniers articles (minimum 3) et s'il y a plus de 3 articles, un carrousel permet de naviguer.
-    L'utilisateur peut proposer entre zéro et six recettes populaires. S'il propose moins de 6 recettes, le site affiche quand même 6 recettes et sélectionne les recettes manquantes aléatoirement, mais il ne propose pas les recettes déjà choisies par l'auteur
-    Le système d'abonnement à la newsletter est fonctionnel (solution libre)
+    On peut choisir le nombre d'articles à afficher dans la section derniers articles (minimum 3).
+    S'il y a plus de 3 articles, un carrousel permet de naviguer.
+    L'utilisateur peut proposer entre zéro et six recettes populaires.
+    S'il propose moins de 6 recettes, le site affiche quand même 6 recettes et sélectionne les recettes manquantes aléatoirement.
+    Il ne propose pas les recettes déjà choisies par l'auteur.
+    Le système d'abonnement à la newsletter est fonctionnel (solution libre).
 
 ## Page blog.html : la page du blog
 
@@ -54,37 +57,46 @@ Ce modèle est constitué d'un titre (administrable) et affiche les neuf dernier
 
 Un article est représenté par une card qui est constituée de :
 
-    Une image
-    Les catégories de l'article (cliquables et qui renvoient vers l'archive de la catégorie)
-    Le titre de l'article
-    L'extrait de l'article
-    Le lien vers l'article
-    Les articles suivants sont accessibles grâce à une pagination.
+    ✅ Une image.
+    Les catégories de l'article (cliquables et qui renvoient vers l'archive de la catégorie).
+    ✅ Le titre de l'article.
+    ✅ L'extrait de l'article.
+    ✅ Le lien vers l'article.
+    ✅ Les articles suivants sont accessibles grâce à une pagination.
 
 _NB : les "cards" sont les mêmes sur tous les modèles_
 
 ### Aller plus loin
 
-    L'extrait est constitué de 20 mots et fini par la chaine "[...]"
-    On peut choisir de rédiger une description courte de présentation de l'article qui sera affichée à la place de l'extrait (uniquement si elle est remplie). Sa longueur est limitée à 120 caractères.
-    On peut filtrer les articles par catégories et changer l'ordre de tri (par date ou titre, ascendant ou descendant). Ces filtres et tri se font sans rechargement de page
+    ✅ L'extrait est constitué de 20 mots et fini par la chaine "[...]".
+    ✅ On peut choisir de rédiger une description courte qui sera affichée à la place de l'extrait (uniquement si elle est remplie).
+    Sa longueur est limitée à 120 caractères.
+    On peut filtrer les articles par catégories et changer l'ordre de tri (par date ou titre, ascendant ou descendant).
+    Ces filtres et tri se font sans rechargement de page.
 
 ## Page category.html : la liste des articles d'une catégorie
 
 Ce modèle fonctionne comme blog.html mais n'affiche que les articles liés à la catégorie en question.
 
-    Le titre est le nom de la catégorie
+    Le titre est le nom de la catégorie.
 
 ## Page article.html : un article
 
-    Un article est constitué d'une image principale qui est un champ obligatoire, d'un titre, d'une date de publication, de catégories et d'un contenu.
+    Un article est constitué de :
+    Une image principale qui est un champ obligatoire.
+    Un titre.
+    Une date de publication.
+    Une catégories.
+    Un contenu.
     Le contenu est éditable via Gutenberg.
 
 ### Aller plus loin
 
     Créer un bloc Gutenberg avec ACF qui permet de choisir une recette publiée sur le site.
-    Ce bloc permet de choir une recette et affiche la photo, le nom et un lien 'Voir la recette' de la recette en question.
-    Faites en sorte que les seuls blocs utilisables dans la rédaction d'un article soient le bloc recette qu'on vient de créer et les blocs 'paragraphe', 'titre', 'liste', et 'image'.
+    Il permet de choir une recette et affiche la photo, le nom et un lien "Voir la recette" de la recette en question.
+    Les seuls blocs utilisables dans la rédaction d'un article :
+    Le bloc recette qu'on vient de créer.
+    Les blocs "paragraphe", "titre", "liste", et "image".
 
 ## Page recipe-list.html : la liste des recettes
 
@@ -95,25 +107,30 @@ Ce modèle fonctionne comme blog.html
 
 Une card de recette est constituée de :
 
-    La photo
-    Les catégories de la recette
-    Le nom
-    Le temps de préparation/cuisson
-    Le nombre de portions
-    Un lien vers la recette
+    La photo.
+    Les catégories de la recette.
+    Le nom.
+    Le temps de préparation/cuisson.
+    Le nombre de portions.
+    Un lien vers la recette.
 
 _NB : les cards recettes sont les mêmes sur tous les modèles_
 
 ### Aller plus loin
 
-    On peut choisir le nombre de recettes affichées dans l'administration
-    On peut filtrer les recettes par catégories, par temps de préparation/cuisson, par nombre de portions et changer l'ordre de tri (par date ou titre, ascendant ou descendant). Ces filtres et tri se font sans rechargement de page
+    On peut choisir le nombre de recettes affichées dans l'administration.
+    On peut filtrer les recettes :
+    Par catégories.
+    Par temps de préparation/cuisson.
+    Par nombre de portions.
+    Changer l'ordre de tri (par date ou titre, ascendant ou descendant).
+    Ces filtres et tri se font sans rechargement de page.
 
 ## Page recipe-list-category.html : la liste des recettes d'une catégorie
 
 Ce modèle fonctionne comme recipe-list.html.
 
-    Le titre est celui de la catégorie
+    Le titre est celui de la catégorie.
 
 ### Aller plus loin
 
@@ -123,19 +140,22 @@ Ce modèle fonctionne comme recipe-list.html.
 
 Une recette est constituée de :
 
-    Une à deux images
-    Un titre
-    Un nombre de portions
-    Un temps de préparation
-    Des catégories pour la classer
-    Une liste d'ingrédients (minimum un ingrédient)
-    Une liste d'étapes de préparation (minimum une étape)
-    Trois recettes liées
-    Les recettes liées sont choisies par l'utilisateur
+    Une à deux images.
+    Un titre.
+    Un nombre de portions.
+    Un temps de préparation.
+    Des catégories pour la classer.
+    Une liste d'ingrédients (minimum un ingrédient).
+    Une liste d'étapes de préparation (minimum une étape).
+    Trois recettes liées.
+    Les recettes liées sont choisies par l'utilisateur.
 
 ### Aller plus loin
 
-    L'auteur peut choisir de zéro à trois recettes liées. Quelque soit le nombre choisi, le site affiche 3 recettes. Les recettes sélectionnées par le site sont des recettes ayant au moins une catégorie en commun, mais ne peuvent pas être la recette affichée, ni une recette choisie par l'auteur. Ces recettes sont affichées aléatoirement parmi les recettes répondant aux critères.
+    L'auteur peut choisir de zéro à trois recettes liées.
+    Quelque soit le nombre choisi, le site affiche 3 recettes.
+    Les recettes sélectionnées par le site sont des recettes ayant au moins une catégorie en commun, mais ne peuvent pas être la recette affichée, ni une recette choisie par l'auteur.
+    Ces recettes sont affichées aléatoirement parmi les recettes répondant aux critères.
 
 ## Page "page.html" : une page de contenu
 
@@ -146,10 +166,10 @@ Une recette est constituée de :
 
 Ce modèle est constitué de :
 
-    Un titre
-    Un contenu (dans lequel on peut mettre en gras, en italique, créer des listes, ...)
-    Un formulaire de contact
-    Une carte de localisation
+    Un titre.
+    Un contenu (dans lequel on peut mettre en gras, en italique, créer des listes, ...).
+    Un formulaire de contact.
+    Une carte de localisation.
 
 Le formulaire 
 
@@ -165,15 +185,16 @@ Le formulaire
 
 Au clic sur les marqueurs, un tooltip affiche les informations l'atelier cuisine :
 
-    Nom
-    Adresse
-    Numéro de téléphone (facultatif) cliquable
-    Email (facultatif) cliquable
-    Url (facultatif) cliquable et s'ouvrant dans un nouvel onglet
+    Nom.
+    Adresse.
+    Numéro de téléphone (facultatif) cliquable.
+    Email (facultatif) cliquable.
+    Url (facultatif) cliquable et s'ouvrant dans un nouvel onglet.
 
 ## Page "search.html" : les résultats de recherche
 
-    Ce modèle est constitué d'un titre affichant les termes recherchés, le nombre de résultats de la recherche, les résultats de la recherche (12 contenus par page de résultats, les autres étant accessibles grâce à une pagination).
+    Ce modèle est constitué d'un titre affichant les termes recherchés, le nombre de résultats de la recherche.
+    Les résultats de la recherche (12 contenus par page de résultats, les autres étant accessibles grâce à une pagination).
     Chaque résultat est constitué du titre, de l'extrait et d'un lien.
     Si aucun résultat n'est disponible, cela est précisé.
 
@@ -184,19 +205,33 @@ Au clic sur les marqueurs, un tooltip affiche les informations l'atelier cuisine
 
 ## Page 404.html : la page 404
 
-Cette page est constituée d'un titre et d'un contenu. Ils sont administrables.
+    Cette page est constituée d'un titre et d'un contenu.
+    Ils sont administrables.
 
 ### Contenus
 
-Les contenus (textes, médias) sont libres, mais il ne doit pas y avoir de "Lorem ipsum" ou autre faux texte.
+    Les contenus (textes, médias) sont libres, mais il ne doit pas y avoir de "Lorem ipsum" ou autre faux texte.
 
 ## Le site doit contenir au minimum :
 
-    Des pages : Accueil / A propos / Contact / Mentions légales / Politique de confidentialité
-    Des articles : minimum vingt classés dans au minimum quatre catégories
-    Des recettes : minimum vingt classées dans au minimum six catégories
+Des pages :
 
-Pour les articles et recettes, saisissez au moins quatre contenus originaux de chaque que vous pouvez ensuite dupliquer.
+    Accueil.
+    À propos.
+    Contact.
+    Mentions légales.
+    Politique de confidentialité.
+
+Des articles :
+
+    Minimum vingt classés dans au minimum quatre catégories.
+
+Des recettes :
+
+    Minimum vingt classées dans au minimum six catégories.
+
+    Pour les articles et recettes, saisissez au moins quatre contenus originaux de chaque que vous pouvez ensuite dupliquer.
+
 Il ne vous est pas demandé d'être créatif, donc n'hésitez pas à aller copier/coller des contenus.
 Si vous vous sentez l'âme créative, faites-vous plaisir.
 
