@@ -3,7 +3,7 @@
     "title": "En-tête",
     "fields": [
         {
-            "key": "field_618ec9d74528d",
+            "key": "quaffiche-len-tete",
             "label": "Qu'affiche l'en-tête",
             "name": "switch_logo_title",
             "type": "select",
@@ -29,7 +29,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_618ec8d94528b",
+            "key": "logo-du-site",
             "label": "Logo du site",
             "name": "site_logo",
             "type": "image",
@@ -61,7 +61,7 @@
             "mime_types": ""
         },
         {
-            "key": "field_618ec9b14528c",
+            "key": "titre-du-site",
             "label": "Titre du site",
             "name": "site_title",
             "type": "text",
@@ -105,5 +105,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1636751949
+    "modified": 1637100432
 }

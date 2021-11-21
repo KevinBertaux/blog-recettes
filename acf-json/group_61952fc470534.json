@@ -1,9 +1,9 @@
 {
-    "key": "group_6162c6fa447d2",
+    "key": "group_61952fc470534",
     "title": "Nous Contacter",
     "fields": [
         {
-            "key": "field_6162c71b36b04",
+            "key": "field_619aafba5b35e",
             "label": "Map",
             "name": "map",
             "type": "url",
@@ -22,9 +22,9 @@
     "location": [
         [
             {
-                "param": "page_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "template-contact.php"
+                "value": "page"
             }
         ]
     ],
@@ -36,5 +36,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1636736554
+    "modified": 1637527539
 }

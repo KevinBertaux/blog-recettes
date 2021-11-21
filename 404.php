@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-
-<h1>404</h1>
-
+<div class="container">
+    <h1><?php the_field('404_title', 'options'); ?></h1>
+    <?php the_field('404_content', 'options'); ?>
+</div>
 <?php get_footer(); ?>

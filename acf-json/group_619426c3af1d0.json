@@ -1,13 +1,13 @@
 {
-    "key": "group_618e4705786cc",
+    "key": "group_619426c3af1d0",
     "title": "Blog",
     "fields": [
         {
-            "key": "field_618e4736fe1fa",
+            "key": "n",
             "label": "Titre court",
             "name": "short_blog_title",
             "type": "text",
-            "instructions": "Un titre plus court pour la page \"Blog\"",
+            "instructions": "Un titre plus court pour la page \"Blog\".",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -39,5 +39,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1636884320
+    "modified": 1637530019
 }
