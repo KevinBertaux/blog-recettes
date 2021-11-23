@@ -8,7 +8,7 @@
             "name": "switch_logo_title",
             "type": "select",
             "instructions": "Choisir un titre pour le site ou un logo",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "30",
@@ -20,7 +20,7 @@
                 "2": "Un texte",
                 "3": "Une image"
             },
-            "default_value": false,
+            "default_value": 1,
             "allow_null": 0,
             "multiple": 0,
             "ui": 0,
@@ -38,7 +38,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_618ec9d74528d",
+                        "field": "quaffiche-len-tete",
                         "operator": "==",
                         "value": "3"
                     }
@@ -70,7 +70,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_618ec9d74528d",
+                        "field": "quaffiche-len-tete",
                         "operator": "==",
                         "value": "2"
                     }
@@ -105,5 +105,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1637100432
+    "modified": 1637697368
 }

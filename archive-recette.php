@@ -17,16 +17,14 @@
                 the_post(); ?>
                 <article class="card">
                     <?php the_post_thumbnail('card-blog', ['class' => 'card-illustration']); ?>
-
-<!--                    --><?php //the_terms(the_post()->ID); ?>
-
                     <ul class="card-terms-list">
-                        <li class="card-terms-item">
-                            <a href="recipe-list-category.html" class="card-terms-link">Soupe</a>
-                        </li>
-                        <li class="card-terms-item">
-                            <a href="recipe-list-category.html" class="card-terms-link">Asiatique</a>
-                        </li>
+                        <?php foreach (get_the_terms(get_the_id(), 'recipetype') as $t) {
+                            $taxo = $t->name; ?>
+                            <li class="card-terms-item">
+                            <a href="<?php echo site_url() . '/recipetype/' . strtolower($taxo) ?>"
+                               class="card-terms-link"><?php echo $taxo; ?></a>
+                            </li><?php
+                        } ?>
                     </ul>
                     <h3 class="card-title"><?php the_title(); ?></h3>
                     <ul class="card-meta-list">
