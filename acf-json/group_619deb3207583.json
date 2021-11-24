@@ -3,6 +3,71 @@
     "title": "Recette",
     "fields": [
         {
+            "key": "field_619e8a574e834",
+            "label": "Illustrations",
+            "name": "recette_illustrations",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "recipe-illustration",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_619e8a814e835",
+                    "label": "Image en avant",
+                    "name": "recette_image_primary",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "recipe-illustration",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_619e8ade4e837",
+                    "label": "Image suplémentaire",
+                    "name": "recette_image_secondary",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "50",
+                        "class": "recipe-illustration",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                }
+            ]
+        },
+        {
             "key": "field_619deb53a4a94",
             "label": "Temps de préparation",
             "name": "recette_temps",
@@ -44,7 +109,7 @@
             "key": "field_619dec1ba4a96",
             "label": "Ingrédients",
             "name": "recette_ingredients",
-            "type": "flexible_content",
+            "type": "repeater",
             "instructions": "Indiquez la liste des ingrédients de la recette.",
             "required": 1,
             "conditional_logic": 0,
@@ -53,46 +118,38 @@
                 "class": "",
                 "id": ""
             },
-            "layouts": {
-                "layout_619ded6a248cd": {
-                    "key": "layout_619ded6a248cd",
-                    "name": "ingredient",
-                    "label": "Ingrédient",
-                    "display": "table",
-                    "sub_fields": [
-                        {
-                            "key": "field_619defcf471f0",
-                            "label": "Ingrédient",
-                            "name": "unique_ingredient",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                }
-            },
-            "button_label": "Ajouter un ingrédient",
+            "collapsed": "",
             "min": 1,
-            "max": ""
+            "max": 0,
+            "layout": "table",
+            "button_label": "Ajouter un ingrédient",
+            "sub_fields": [
+                {
+                    "key": "field_619defcf471f0",
+                    "label": "Ingrédient",
+                    "name": "unique_ingredient",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         },
         {
             "key": "field_619deddca4a98",
             "label": "Étapes",
             "name": "recette_etapes",
-            "type": "flexible_content",
+            "type": "repeater",
             "instructions": "Indiquez les étapes de préparation de la recette.",
             "required": 1,
             "conditional_logic": 0,
@@ -101,40 +158,32 @@
                 "class": "",
                 "id": ""
             },
-            "layouts": {
-                "layout_619dedf46da4a": {
-                    "key": "layout_619dedf46da4a",
-                    "name": "etape",
-                    "label": "Étape",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_619df02e471f1",
-                            "label": "Étape",
-                            "name": "unique_etape",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "maxlength": ""
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                }
-            },
-            "button_label": "Ajouter une étape",
+            "collapsed": "",
             "min": 1,
-            "max": ""
+            "max": 0,
+            "layout": "table",
+            "button_label": "Ajouter une étape",
+            "sub_fields": [
+                {
+                    "key": "field_619e76d363db7",
+                    "label": "Étape",
+                    "name": "unique_etape",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -154,5 +203,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1637740632
+    "modified": 1637787601
 }

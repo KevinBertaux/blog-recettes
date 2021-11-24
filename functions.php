@@ -10,6 +10,7 @@ function ecfwp_setup_theme()
 
     /* Définition des tailles d'images personnalisées */
     add_image_size('card-blog', 320, 480, true);
+    add_image_size('image_recipe', 485, 600, true);
     add_image_size('image-blog', 1020, 680, true);
 }
 

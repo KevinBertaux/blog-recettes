@@ -14,9 +14,10 @@
         <div class="blog-grid">
             <?php
             while (have_posts()) {
-                the_post(); ?>
+                the_post();
+                $illustrations = get_field('recette_illustrations'); ?>
                 <article class="card">
-                    <?php the_post_thumbnail('card-blog', ['class' => 'card-illustration']); ?>
+                    <img src="<?php echo $illustrations['recette_image_primary']; ?>" class="card-illustration">
                     <ul class="card-terms-list">
                         <?php foreach (get_the_terms(get_the_id(), 'recipetype') as $t) {
                             $taxo = $t->name; ?>
@@ -28,8 +29,8 @@
                     </ul>
                     <h3 class="card-title"><?php the_title(); ?></h3>
                     <ul class="card-meta-list">
-                        <li class="card-meta-item">45 min</li>
-                        <li class="card-meta-item">6-8 portions</li>
+                        <li class="card-meta-item"><?php the_field('recette_temps'); ?></li>
+                        <li class="card-meta-item"><?php the_field('recette_portions'); ?></li>
                     </ul>
                     <a href="<?php the_permalink(); ?>" class="card-link">Voir la recette</a>
                 </article>
