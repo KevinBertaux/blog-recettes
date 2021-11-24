@@ -1,0 +1,158 @@
+{
+    "key": "group_619deb3207583",
+    "title": "Recette",
+    "fields": [
+        {
+            "key": "field_619deb53a4a94",
+            "label": "Temps de préparation",
+            "name": "recette_temps",
+            "type": "text",
+            "instructions": "Indiquez le temps de préparation total de la recette en heures\/minutes",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "1h30",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_619debb8a4a95",
+            "label": "Nombre de portions",
+            "name": "recette_portions",
+            "type": "text",
+            "instructions": "Indiquez le nombre de portions pour la recette",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "4 à 6 portions",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_619dec1ba4a96",
+            "label": "Ingrédients",
+            "name": "recette_ingredients",
+            "type": "flexible_content",
+            "instructions": "Indiquez la liste des ingrédients de la recette.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_619ded6a248cd": {
+                    "key": "layout_619ded6a248cd",
+                    "name": "ingredient",
+                    "label": "Ingrédient",
+                    "display": "table",
+                    "sub_fields": [
+                        {
+                            "key": "field_619defcf471f0",
+                            "label": "Ingrédient",
+                            "name": "unique_ingredient",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Ajouter un ingrédient",
+            "min": 1,
+            "max": ""
+        },
+        {
+            "key": "field_619deddca4a98",
+            "label": "Étapes",
+            "name": "recette_etapes",
+            "type": "flexible_content",
+            "instructions": "Indiquez les étapes de préparation de la recette.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layouts": {
+                "layout_619dedf46da4a": {
+                    "key": "layout_619dedf46da4a",
+                    "name": "etape",
+                    "label": "Étape",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_619df02e471f1",
+                            "label": "Étape",
+                            "name": "unique_etape",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Ajouter une étape",
+            "min": 1,
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "recette"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1637740632
+}
