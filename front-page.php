@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
-<h1>FRONTPAGE</h1>
-
+<div class="container">
+    <h1>FRONTPAGE</h1>
+</div>
 <?php get_footer(); ?>

@@ -73,12 +73,22 @@
                     </ol>
                 </div>
             </section>
+
             <footer class="related-recipes">
                 <div class="container">
                     <h2>Vous pourriez aussi aimer ...</h2>
+
+                    <?php
+                    $fr1 = get_field('featured_recipe_1');
+                    $permalink = get_permalink( $fr1->ID );
+//                    var_dump($fr1);
+                    ?>
+
                     <div class="blog-grid">
+
                         <article class="card">
-                            <img src="img/pho_boeuf_card.jpg" alt="Pho au boeuf" class="card-illustration">
+                            <?php echo wp_get_attachment_image(get_field('recette_illustrations', $fr1->ID)['recette_image_primary'], 'card-blog', 'false', ['class' => 'card-illustration']); ?>
+<!--                            <img src="img/pho_boeuf_card.jpg" class="card-illustration">-->
                             <ul class="card-terms-list">
                                 <li class="card-terms-item">
                                     <a href="recipe-list-category.html" class="card-terms-link">Soupe</a>
@@ -87,47 +97,14 @@
                                     <a href="recipe-list-category.html" class="card-terms-link">Asiatique</a>
                                 </li>
                             </ul>
-                            <h3 class="card-title">Phô au boeuf </h3>
+                            <h3 class="card-title"><?php echo $fr1->post_title ?></h3>
                             <ul class="card-meta-list">
-                                <li class="card-meta-item">45 min</li>
-                                <li class="card-meta-item">6-8 portions</li>
+                                <li class="card-meta-item"><?php echo get_field('recette_temps', $fr1->ID); ?></li>
+                                <li class="card-meta-item"><?php echo get_field('recette_portions', $fr1->ID); ?></li>
                             </ul>
-                            <a href="recipe.html" class="card-link">Voir la recette</a>
+                            <a href="<?php echo esc_url( $permalink ); ?>" class="card-link">Voir la recette</a>
                         </article>
-                        <article class="card">
-                            <img src="img/pho_boeuf_card.jpg" alt="Pho au boeuf" class="card-illustration">
-                            <ul class="card-terms-list">
-                                <li class="card-terms-item">
-                                    <a href="recipe-list-category.html" class="card-terms-link">Soupe</a>
-                                </li>
-                                <li class="card-terms-item">
-                                    <a href="recipe-list-category.html" class="card-terms-link">Asiatique</a>
-                                </li>
-                            </ul>
-                            <h3 class="card-title">Phô au boeuf </h3>
-                            <ul class="card-meta-list">
-                                <li class="card-meta-item">45 min</li>
-                                <li class="card-meta-item">6-8 portions</li>
-                            </ul>
-                            <a href="recipe.html" class="card-link">Voir la recette</a>
-                        </article>
-                        <article class="card">
-                            <img src="img/pho_boeuf_card.jpg" alt="Pho au boeuf" class="card-illustration">
-                            <ul class="card-terms-list">
-                                <li class="card-terms-item">
-                                    <a href="recipe-list-category.html" class="card-terms-link">Soupe</a>
-                                </li>
-                                <li class="card-terms-item">
-                                    <a href="recipe-list-category.html" class="card-terms-link">Asiatique</a>
-                                </li>
-                            </ul>
-                            <h3 class="card-title">Phô au boeuf </h3>
-                            <ul class="card-meta-list">
-                                <li class="card-meta-item">45 min</li>
-                                <li class="card-meta-item">6-8 portions</li>
-                            </ul>
-                            <a href="recipe.html" class="card-link">Voir la recette</a>
-                        </article>
+
                     </div>
                 </div>
             </footer>
