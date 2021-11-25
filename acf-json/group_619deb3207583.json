@@ -8,7 +8,7 @@
             "name": "recette_illustrations",
             "type": "group",
             "instructions": "",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -203,5 +203,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1637787601
+    "modified": 1637827060
 }

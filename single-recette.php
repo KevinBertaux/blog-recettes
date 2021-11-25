@@ -23,39 +23,31 @@
                             <li class="recipe-meta-item duration"><?php the_field('recette_temps'); ?></li>
                         </ul>
                         <ul class="recipe-terms-list">
-                            <li class="recipe-terms-item">
-                                <a href="recipe-list-category.html" class="recipe-terms-link">Soupe</a>
-                            </li>
-                            <li class="recipe-terms-item">
-                                <a href="recipe-list-category.html" class="recipe-terms-link">Asiatique</a>
-                            </li>
+                            <?php foreach (get_the_terms(get_the_id(), 'recipetype') as $t) {
+                                $taxo = $t->name; ?>
+                                <li class="recipe-terms-item">
+                                <a href="<?php echo site_url() . '/recipetype/' . strtolower($taxo) ?>"
+                                   class="recipe-terms-link"><?php echo $taxo; ?></a>
+                                </li><?php
+                            } ?>
                         </ul>
+
                         <div class="recipe-ingredients-content">
                             <h2>Ingrédients</h2>
                             <ul class="recipe-ingredients-list">
-                                <li class="recipe-ingredients-item">2 kg d’os de boeuf détaillés en petits morceaux</li>
-                                <li class="recipe-ingredients-item">1 morceau d’environ 250 g d’aiguillette de boeuf
-                                </li>
-                                <li class="recipe-ingredients-item">2 ciboules chinoises (à défaut, 2 oignons et 6 tiges
-                                    de
-                                    persil plat)
-                                </li>
-                                <li class="recipe-ingredients-item">5 cm de racine de gingembre frais</li>
-                                <li class="recipe-ingredients-item">2 étoiles de badiane (anis)</li>
-                                <li class="recipe-ingredients-item">Gros sel</li>
-                                <li class="recipe-ingredients-item">10 grains de poivre noir</li>
-                                <li class="recipe-ingredients-item">500 g de nouilles plates de riz</li>
-                                <li class="recipe-ingredients-item">½ bouquet de coriandre fraîche</li>
-                                <li class="recipe-ingredients-item">½ bouquet de menthe fraîche</li>
-                                <li class="recipe-ingredients-item">4 tiges de basilic chinois (ou à défaut 4 cuillères
-                                    à café
-                                    de basilic traditionnel, haché)
-                                </li>
-                                <li class="recipe-ingredients-item">2 citrons verts</li>
-                                <li class="recipe-ingredients-item">1 petit piment frais (ou à défaut 1 cuillère à café
-                                    de purée
-                                    de piment)
-                                </li>
+                                <?php
+                                if (have_rows('recette_ingredients')) {
+                                    while (have_rows('recette_ingredients')) {
+                                        the_row();
+                                        ?>
+                                        <li class="recipe-ingredients-item">
+                                            <?php the_sub_field('unique_ingredient'); ?>
+                                        </li>
+                                    <?php }
+                                } else {
+                                    echo('no rows found');
+                                }
+                                ?>
                             </ul>
                         </div>
                     </div>
@@ -65,52 +57,19 @@
                 <div class="container">
                     <h2>Préparation</h2>
                     <ol class="recipe-steps-list">
-                        <li class="recipe-steps-item">Disposer les os de bœuf dans un grand faitout. Les recouvrir de 4
-                            litres
-                            d’eau froide. Porter à ébullition sur feu doux, en écumant régulièrement la surface.
-                        </li>
-                        <li class="recipe-steps-item">Y ajouter les ciboules entières, le gingembre épluché et coupé en
-                            fines
-                            lamelles et la badiane.
-                        </li>
-                        <li class="recipe-steps-item">Assaisonner avec le gros sel et ajouter les grains de poivre.</li>
-                        <li class="recipe-steps-item">Laisser mijoter, à feu doux, en couvrant partiellement le faitout,
-                            pendant
-                            4 heures.
-                        </li>
-                        <li class="recipe-steps-item">En fin de cuisson, filtrer le bouillon à l’aide d’un chinois ou
-                            d’un
-                            tamis. Le laisser refroidir, puis en congeler la moitié (qui pourra servir de base pour la
-                            préparation de nombreuses autres recettes) et remettre l’autre moitié à bouillir.
-                        </li>
-                        <li class="recipe-steps-item">Hacher ensuite finement la moitié des feuilles de menthe, de
-                            coriandre et
-                            de basilic. Réserver le restant des herbes fraîches pour la présentation finale.
-                        </li>
-                        <li class="recipe-steps-item">Couper le petit piment en deux, dans le sens de longueur, et en
-                            retirer
-                            les graines. Emincer ensuite sa chair en fines rondelles. Disposer ce hachis dans une petite
-                            coupelle.
-                        </li>
-                        <li class="recipe-steps-item">Détailler ensuite la viande de bœuf en lamelles, et rajouter
-                            celles-ci au
-                            bouillon chaud.
-                        </li>
-                        <li class="recipe-steps-item">Cuire séparément les nouilles de riz dans une casserole d’eau
-                            bouillante
-                            salée pendant 3 à 5 mn. Les égoutter en fin de cuisson.
-                        </li>
-                        <li class="recipe-steps-item">Répartir les nouilles dans le fond de 4 bols de service. Y ajouter
-                            les
-                            herbes ciselées. Y ajouter les lamelles de bœuf prélevées dans le bouillon à l’aide d’une
-                            écumoire,
-                            puis verser par-dessus le bouillon bouillant.
-                        </li>
-                        <li class="recipe-steps-item">Servir en accompagnement le restant des herbes dans des coupelles,
-                            à
-                            ajouter selon les envies de chacun.
-                        </li>
-                        <li class="recipe-steps-item">Servir bien chaud et rapidement.</li>
+                        <?php
+                        if (have_rows('recette_etapes')) {
+                            while (have_rows('recette_etapes')) {
+                                the_row();
+                                ?>
+                                <li class="recipe-steps-item">
+                                    <?php the_sub_field('unique_etape'); ?>
+                                </li>
+                            <?php }
+                        } else {
+                            echo('no rows found');
+                        }
+                        ?>
                     </ol>
                 </div>
             </section>

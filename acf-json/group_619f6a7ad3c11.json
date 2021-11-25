@@ -1,0 +1,43 @@
+{
+    "key": "group_619f6a7ad3c11",
+    "title": "Archive recettes",
+    "fields": [
+        {
+            "key": "field_619f6a85007e1",
+            "label": "Titre personalisé",
+            "name": "recipe_title",
+            "type": "text",
+            "instructions": "Indiquez le titre à afficher en haut de la section \"Recettes\" du blog",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "Titre",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-recettes"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1637837816
+}

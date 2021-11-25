@@ -1,14 +1,11 @@
 <?php get_header(); ?>
 <div class="container">
     <?php if (have_posts()) { ?>
-        <h1 class="section-title">a coriger
-            <?php if (is_home()) {
-                single_post_title();
-            } elseif (is_category()) {
-                single_cat_title('Catégorie : ');
-            } elseif (is_tax()) {
-                $term = get_term(get_queried_object()->term_id);
-                echo 'Taxonomie ' . $term->taxonomy . ' : ' . $term->name;
+        <h1 class="section-title">
+            <?php if (get_field('recipe_title', 'option')) {
+                the_field('recipe_title', 'option');
+            } else {
+                echo get_post_type_object('recette')->labels->singular_name;
             } ?>
         </h1>
         <div class="blog-grid">
@@ -17,7 +14,7 @@
                 the_post();
                 $illustrations = get_field('recette_illustrations'); ?>
                 <article class="card">
-                    <img src="<?php echo $illustrations['recette_image_primary']; ?>" class="card-illustration">
+                    <?php echo wp_get_attachment_image($illustrations['recette_image_primary'], 'card-blog', 'false', ['class' => 'card-illustration']); ?>
                     <ul class="card-terms-list">
                         <?php foreach (get_the_terms(get_the_id(), 'recipetype') as $t) {
                             $taxo = $t->name; ?>
