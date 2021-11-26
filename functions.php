@@ -73,8 +73,14 @@ if (function_exists('acf_add_options_page')) {
     ]);
 
     acf_add_options_sub_page([
+        'page_title' => 'Paramétrage blog',
+        'menu_title' => 'Blog',
+        'parent_slug' => 'theme-general-settings',
+    ]);
+
+    acf_add_options_sub_page([
         'page_title' => 'Paramétrage recettes',
-        'menu_title' => 'Recettes',
+        'menu_title' => 'Recette',
         'parent_slug' => 'theme-general-settings',
     ]);
 

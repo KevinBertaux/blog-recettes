@@ -1,13 +1,18 @@
 <div class="container">
     <?php if (have_posts()) { ?>
         <h1 class="section-title">
-            <?php if (is_home()) {
-                single_post_title();
-            } elseif (is_category()) {
-                single_cat_title('Catégorie : ');
-            } elseif (is_tax()) {
-                $term = get_term(get_queried_object()->term_id);
-                echo 'Taxonomie ' . $term->taxonomy . ' : ' . $term->name;
+            <?php
+            if (get_field('blog_title', 'option')) {
+                the_field('blog_title', 'option');
+            } else {
+                if (is_home()) {
+                    single_post_title();
+                } elseif (is_category()) {
+                    single_cat_title('Catégorie : ');
+                } elseif (is_tax()) {
+                    $term = get_term(get_queried_object()->term_id);
+                    echo 'Taxonomie ' . $term->taxonomy . ' : ' . $term->name;
+                }
             } ?>
         </h1>
         <div class="blog-grid">
