@@ -8,12 +8,26 @@
                 <div class="container">
                     <?php $illustrations = get_field('recette_illustrations'); ?>
                     <div class="recipe-header-img">
-                        <?php echo wp_get_attachment_image($illustrations['recette_image_primary'], 'image_recipe', 'false', ['class' => 'recipe-illustration']); ?>
+                        <?php
+                        echo wp_get_attachment_image(
+                            $illustrations['recette_image_primary'],
+                            'image_recipe',
+                            'false',
+                            ['class' => 'recipe-illustration']
+                        );
+                        ?>
                     </div>
                     <?php
                     if ($illustrations['recette_image_secondary']) { ?>
                         <div class="recipe-header-img">
-                            <?php echo wp_get_attachment_image($illustrations['recette_image_secondary'], 'image_recipe', 'false', ['class' => 'recipe-illustration']); ?>
+                            <?php
+                            echo wp_get_attachment_image(
+                                $illustrations['recette_image_secondary'],
+                                'image_recipe',
+                                'false',
+                                ['class' => 'recipe-illustration']
+                            );
+                            ?>
                         </div>
                     <?php } ?>
                     <div class="recipe-header-content">
@@ -77,34 +91,111 @@
             <footer class="related-recipes">
                 <div class="container">
                     <h2>Vous pourriez aussi aimer ...</h2>
-
-                    <?php
-                    $fr1 = get_field('featured_recipe_1');
-                    $permalink = get_permalink( $fr1->ID );
-//                    var_dump($fr1);
-                    ?>
-
                     <div class="blog-grid">
+                        <?php
+                        $fr1 = get_field('featured_recipe_1');
+                        if ($fr1) {
+                            $permalink1 = get_permalink($fr1->ID);
+                            ?>
+                            <article class="card">
+                                <?php
+                                echo wp_get_attachment_image(
+                                    get_field('recette_illustrations',
+                                        $fr1->ID)['recette_image_primary'],
+                                    'card-blog',
+                                    'false',
+                                    ['class' => 'card-illustration']
+                                );
+                                ?>
+                                <ul class="card-terms-list">
+                                    <?php foreach (get_the_terms($fr1->ID, 'recipetype') as $t) {
+                                        $taxo = $t->name; ?>
+                                        <li class="card-terms-item">
+                                        <a href="<?php echo site_url() . '/recipetype/' . strtolower($taxo) ?>"
+                                           class="card-terms-link"><?php echo $taxo; ?></a>
+                                        </li><?php
+                                    } ?>
+                                </ul>
+                                <h3 class="card-title"><?php echo $fr1->post_title ?></h3>
+                                <ul class="card-meta-list">
+                                    <li class="card-meta-item"><?php echo get_field('recette_temps', $fr1->ID); ?></li>
+                                    <li class="card-meta-item"><?php echo get_field('recette_portions', $fr1->ID); ?></li>
+                                </ul>
+                                <a href="<?php echo esc_url($permalink1); ?>" class="card-link">Voir la recette</a>
+                            </article>
+                        <?php } else {
+                            echo 'NOPE 1';
+                        } ?>
 
-                        <article class="card">
-                            <?php echo wp_get_attachment_image(get_field('recette_illustrations', $fr1->ID)['recette_image_primary'], 'card-blog', 'false', ['class' => 'card-illustration']); ?>
-<!--                            <img src="img/pho_boeuf_card.jpg" class="card-illustration">-->
-                            <ul class="card-terms-list">
-                                <li class="card-terms-item">
-                                    <a href="recipe-list-category.html" class="card-terms-link">Soupe</a>
-                                </li>
-                                <li class="card-terms-item">
-                                    <a href="recipe-list-category.html" class="card-terms-link">Asiatique</a>
-                                </li>
-                            </ul>
-                            <h3 class="card-title"><?php echo $fr1->post_title ?></h3>
-                            <ul class="card-meta-list">
-                                <li class="card-meta-item"><?php echo get_field('recette_temps', $fr1->ID); ?></li>
-                                <li class="card-meta-item"><?php echo get_field('recette_portions', $fr1->ID); ?></li>
-                            </ul>
-                            <a href="<?php echo esc_url( $permalink ); ?>" class="card-link">Voir la recette</a>
-                        </article>
+                        <?php
+                        $fr2 = get_field('featured_recipe_2');
+                        if ($fr2) {
+                            $permalink2 = get_permalink($fr2->ID);
+                            ?>
+                            <article class="card">
+                                <?php
+                                echo wp_get_attachment_image(
+                                    get_field('recette_illustrations',
+                                        $fr2->ID)['recette_image_primary'],
+                                    'card-blog',
+                                    'false',
+                                    ['class' => 'card-illustration']
+                                );
+                                ?>
+                                <ul class="card-terms-list">
+                                    <?php foreach (get_the_terms($fr2->ID, 'recipetype') as $t) {
+                                        $taxo = $t->name; ?>
+                                        <li class="card-terms-item">
+                                        <a href="<?php echo site_url() . '/recipetype/' . strtolower($taxo) ?>"
+                                           class="card-terms-link"><?php echo $taxo; ?></a>
+                                        </li><?php
+                                    } ?>
+                                </ul>
+                                <h3 class="card-title"><?php echo $fr2->post_title ?></h3>
+                                <ul class="card-meta-list">
+                                    <li class="card-meta-item"><?php echo get_field('recette_temps', $fr2->ID); ?></li>
+                                    <li class="card-meta-item"><?php echo get_field('recette_portions', $fr2->ID); ?></li>
+                                </ul>
+                                <a href="<?php echo esc_url($permalink2); ?>" class="card-link">Voir la recette</a>
+                            </article>
+                        <?php } else {
+                            echo 'NOPE 2';
+                        } ?>
 
+                        <?php
+                        $fr3 = get_field('featured_recipe_3');
+                        if ($fr3) {
+                            $permalink3 = get_permalink($fr3->ID);
+                            ?>
+                            <article class="card">
+                                <?php
+                                echo wp_get_attachment_image(
+                                    get_field('recette_illustrations',
+                                        $fr3->ID)['recette_image_primary'],
+                                    'card-blog',
+                                    'false',
+                                    ['class' => 'card-illustration']
+                                );
+                                ?>
+                                <ul class="card-terms-list">
+                                    <?php foreach (get_the_terms($fr3->ID, 'recipetype') as $t) {
+                                        $taxo = $t->name; ?>
+                                        <li class="card-terms-item">
+                                        <a href="<?php echo site_url() . '/recipetype/' . strtolower($taxo) ?>"
+                                           class="card-terms-link"><?php echo $taxo; ?></a>
+                                        </li><?php
+                                    } ?>
+                                </ul>
+                                <h3 class="card-title"><?php echo $fr3->post_title ?></h3>
+                                <ul class="card-meta-list">
+                                    <li class="card-meta-item"><?php echo get_field('recette_temps', $fr3->ID); ?></li>
+                                    <li class="card-meta-item"><?php echo get_field('recette_portions', $fr3->ID); ?></li>
+                                </ul>
+                                <a href="<?php echo esc_url($permalink3); ?>" class="card-link">Voir la recette</a>
+                            </article>
+                        <?php } else {
+                            echo 'NOPE 3';
+                        } ?>
                     </div>
                 </div>
             </footer>
