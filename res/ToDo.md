@@ -84,12 +84,12 @@ _NB : les "cards" sont les mêmes sur tous les modèles_
 
 Un article est constitué de :
 
-    Une image principale qui est un champ obligatoire.
-    Un titre.
-    Une date de publication.
-    Une catégorie.
-    Un contenu.
-    Le contenu est éditable via Gutenberg.
+    ✅ Une image principale qui est un champ obligatoire.
+    ✅ Un titre.
+    ✅ Une date de publication.
+    ✅ Une catégorie.
+    ✅ Un contenu.
+    ✅ Le contenu est éditable via Gutenberg.
 
 ### Aller plus loin
 
@@ -103,7 +103,7 @@ Un article est constitué de :
 
 Ce modèle fonctionne comme blog.html
 
-    Le titre est administrable, mais s'il n'est pas rempli, c'est le nom au pluriel du CPT qui s'affiche.
+    ✅ Le titre est administrable, mais s'il n'est pas rempli, c'est le nom au pluriel du CPT qui s'affiche.
     Il affiche les douze dernières recettes et une pagination permet de voir les recettes suivantes.
 
 Une card de recette est constituée de :

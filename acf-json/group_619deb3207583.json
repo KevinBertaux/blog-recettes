@@ -81,7 +81,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "1h30",
+            "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -100,7 +100,7 @@
                 "id": ""
             },
             "default_value": "",
-            "placeholder": "4 à 6 portions",
+            "placeholder": "",
             "prepend": "",
             "append": "",
             "maxlength": ""
@@ -187,7 +187,7 @@
         },
         {
             "key": "field_619fcdd34bee3",
-            "label": "Recette 1",
+            "label": "Recette en avant 1",
             "name": "featured_recipe_1",
             "type": "post_object",
             "instructions": "",
@@ -209,7 +209,7 @@
         },
         {
             "key": "field_619feed14385f",
-            "label": "Recette 2",
+            "label": "Recette en avant 2",
             "name": "featured_recipe_2",
             "type": "post_object",
             "instructions": "",
@@ -231,7 +231,7 @@
         },
         {
             "key": "field_619feed643860",
-            "label": "Recette 3",
+            "label": "Recette en avant 3",
             "name": "featured_recipe_3",
             "type": "post_object",
             "instructions": "",
@@ -250,22 +250,6 @@
             "multiple": 0,
             "return_format": "object",
             "ui": 1
-        },
-        {
-            "key": "field_619fee734385e",
-            "label": "Recettes en avant",
-            "name": "featured_recipes",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": []
         }
     ],
     "location": [
@@ -285,5 +269,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1637873167
+    "modified": 1637949063
 }
