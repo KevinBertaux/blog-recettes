@@ -104,22 +104,22 @@ Un article est constitué de :
 Ce modèle fonctionne comme blog.html
 
     ✅ Le titre est administrable, mais s'il n'est pas rempli, c'est le nom au pluriel du CPT qui s'affiche.
-    Il affiche les douze dernières recettes et une pagination permet de voir les recettes suivantes.
+    ✅ Il affiche les douze dernières recettes et une pagination permet de voir les recettes suivantes.
 
 Une card de recette est constituée de :
 
-    La photo.
-    Les catégories de la recette.
-    Le nom.
-    Le temps de préparation/cuisson.
-    Le nombre de portions.
-    Un lien vers la recette.
+    ✅ La photo.
+    ✅ Les catégories de la recette.
+    ✅ Le nom.
+    ✅ Le temps de préparation/cuisson.
+    ✅ Le nombre de portions.
+    ✅ Un lien vers la recette.
 
 _NB : les cards recettes sont les mêmes sur tous les modèles_
 
 ### Aller plus loin
 
-    On peut choisir le nombre de recettes affichées dans l'administration.
+    ✅ On peut choisir le nombre de recettes affichées dans l'administration.
     On peut filtrer les recettes :
     Par catégories.
     Par temps de préparation/cuisson.
@@ -141,19 +141,19 @@ Ce modèle fonctionne comme recipe-list.html.
 
 Une recette est constituée de :
 
-    Une à deux images.
-    Un titre.
-    Un nombre de portions.
-    Un temps de préparation.
-    Des catégories pour la classer.
-    Une liste d'ingrédients (minimum un ingrédient).
-    Une liste d'étapes de préparation (minimum une étape).
-    Trois recettes liées.
-    Les recettes liées sont choisies par l'utilisateur.
+    ✅ Une à deux images.
+    ✅ Un titre.
+    ✅ Un nombre de portions.
+    ✅ Un temps de préparation.
+    ✅ Des catégories pour la classer.
+    ✅ Une liste d'ingrédients (minimum un ingrédient).
+    ✅ Une liste d'étapes de préparation (minimum une étape).
+    ✅ Trois recettes liées.
+    ✅ Les recettes liées sont choisies par l'utilisateur.
 
 ### Aller plus loin
 
-    L'auteur peut choisir de zéro à trois recettes liées.
+    ✅ L'auteur peut choisir de zéro à trois recettes liées.
     Quelque soit le nombre choisi, le site affiche 3 recettes.
     Les recettes sélectionnées par le site sont des recettes ayant au moins une catégorie en commun, mais ne peuvent pas être la recette affichée, ni une recette choisie par l'auteur.
     Ces recettes sont affichées aléatoirement parmi les recettes répondant aux critères.

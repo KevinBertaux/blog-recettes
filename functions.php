@@ -102,7 +102,10 @@ add_filter( 'excerpt_length', 'ecfwp_custom_excerpt_length', 999 );
 /* Modification de la boucle de WP */
 function ecfwp_override_query( $wp_query ) {
 	if ( ! $wp_query->is_admin() and $wp_query->is_main_query() and is_post_type_archive( 'recette' ) ) {
-		$wp_query->set( 'posts_per_page', 12 );
+		$recipePerPage = get_field( 'recipe_per_page', 'options' );
+		if ( $recipePerPage ) {
+			$wp_query->set( 'posts_per_page', $recipePerPage );
+		}
 		$wp_query->set( 'orderby', 'date' );
 		$wp_query->set( 'order', 'DESC' );
 	}

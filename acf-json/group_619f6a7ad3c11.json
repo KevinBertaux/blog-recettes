@@ -20,6 +20,27 @@
             "prepend": "Titre",
             "append": "",
             "maxlength": ""
+        },
+        {
+            "key": "field_61a1f903b3d75",
+            "label": "Nombre de recettes par pages",
+            "name": "recipe_per_page",
+            "type": "number",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": 12,
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "min": 1,
+            "max": "",
+            "step": 1
         }
     ],
     "location": [
@@ -27,7 +48,7 @@
             {
                 "param": "options_page",
                 "operator": "==",
-                "value": "acf-options-recettes"
+                "value": "acf-options-recette"
             }
         ]
     ],
@@ -39,5 +60,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1637837816
+    "modified": 1638006260
 }

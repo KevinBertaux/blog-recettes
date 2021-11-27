@@ -196,6 +196,13 @@
                         <?php } else {
                             echo 'NOPE 3';
                         } ?>
+
+<!--                        --><?php
+//                        $randPostID = get_post();
+//                        echo '<br><br> Random post ID:<br>' . $randPostID;
+//                        ?>
+
+
                     </div>
                 </div>
             </footer>
