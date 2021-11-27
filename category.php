@@ -6,7 +6,7 @@
 		$related = new WP_Query(
 			[
 				'category__in'   => wp_get_post_categories( $post->ID ),
-				'posts_per_page' => 3
+//				'posts_per_page' => 3
 			]
 		);
 		?>

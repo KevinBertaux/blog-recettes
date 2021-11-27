@@ -16,11 +16,10 @@
                 <article class="card">
                     <?php echo wp_get_attachment_image($illustrations['recette_image_primary'], 'card-blog', 'false', ['class' => 'card-illustration']); ?>
                     <ul class="card-terms-list">
-                        <?php foreach (get_the_terms(get_the_id(), 'recipetype') as $t) {
-                            $taxo = $t->name; ?>
+                        <?php foreach (get_the_terms(get_the_id(), 'recipetype') as $t) { ?>
                             <li class="card-terms-item">
-                            <a href="<?php echo site_url() . '/recipetype/' . strtolower($taxo) ?>"
-                               class="card-terms-link"><?php echo $taxo; ?></a>
+                            <a href="<?php echo site_url() . '/recipetype/' . $t->slug ?>"
+                               class="card-terms-link"><?php echo $t->name; ?></a>
                             </li><?php
                         } ?>
                     </ul>
