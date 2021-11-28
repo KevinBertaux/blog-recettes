@@ -160,44 +160,44 @@ Une recette est constituée de :
 
 ## Page "page.html" : une page de contenu
 
-    Une page est constituée d'un titre et d'un contenu.
-    Ce contenu est éditable via Gutenberg.
+    ✅ Une page est constituée d'un titre et d'un contenu.
+    ✅ Ce contenu est éditable via Gutenberg.
 
 ## Page contact.html : la page contact
 
 Ce modèle est constitué de :
 
-    Un titre.
-    Un contenu (dans lequel on peut mettre en gras, en italique, créer des listes, ...).
-    Un formulaire de contact.
-    Une carte de localisation.
+    ✅ Un titre.
+    ✅ Un contenu (dans lequel on peut mettre en gras, en italique, créer des listes, ...).
+    ✅ Un formulaire de contact.
+    ✅ Une carte de localisation.
 
 Le formulaire 
 
     Le formulaire est fonctionnel.
     L'auteur du site reçoit le contenu du formulaire.
     La personne qui a rempli le formulaire reçoit un mail lui indiquant que son message est bien reçu et qu'il sera traité rapidement.
-    La carte affiche plusieurs marqueurs correspondant à des ateliers cuisine.
-    Au clic sur le marqueur, on affiche le nom et l'adresse de l'atelier.
-    Vous êtes libre de choisir le fournisseur de carte.
-    Ne cherchez pas à reproduire la carte utilisée pour l'intégration.
+    ✅ La carte affiche plusieurs marqueurs correspondant à des ateliers cuisine.
+    ✅ Au clic sur le marqueur, on affiche le nom et l'adresse de l'atelier.
+    ✅ Vous êtes libre de choisir le fournisseur de carte.
+    ✅ Ne cherchez pas à reproduire la carte utilisée pour l'intégration.
 
 ### Aller plus loin
 
 Au clic sur les marqueurs, un tooltip affiche les informations l'atelier cuisine :
 
-    Nom.
-    Adresse.
+    ✅ Nom.
+    ✅ Adresse.
     Numéro de téléphone (facultatif) cliquable.
     Email (facultatif) cliquable.
     Url (facultatif) cliquable et s'ouvrant dans un nouvel onglet.
 
 ## Page "search.html" : les résultats de recherche
 
-    Ce modèle est constitué d'un titre affichant les termes recherchés, le nombre de résultats de la recherche.
+    ✅ Ce modèle est constitué d'un titre affichant les termes recherchés, le nombre de résultats de la recherche.
     Les résultats de la recherche (12 contenus par page de résultats, les autres étant accessibles grâce à une pagination).
-    Chaque résultat est constitué du titre, de l'extrait et d'un lien.
-    Si aucun résultat n'est disponible, cela est précisé.
+    ✅ Chaque résultat est constitué du titre, de l'extrait et d'un lien.
+    ✅ Si aucun résultat n'est disponible, cela est précisé.
 
 ### Aller plus loin
 
@@ -206,8 +206,8 @@ Au clic sur les marqueurs, un tooltip affiche les informations l'atelier cuisine
 
 ## Page 404.html : la page 404
 
-    Cette page est constituée d'un titre et d'un contenu.
-    Ils sont administrables.
+    ✅ Cette page est constituée d'un titre et d'un contenu.
+    ✅ Ils sont administrables.
 
 ### Contenus
 
@@ -218,20 +218,19 @@ Au clic sur les marqueurs, un tooltip affiche les informations l'atelier cuisine
 Des pages :
 
     Accueil.
-    À propos.
-    Contact.
-    Mentions légales.
-    Politique de confidentialité.
+    ✅ À propos.
+    ✅ Contact.
+    ✅ Mentions légales.
+    ✅ Politique de confidentialité.
 
 Des articles :
 
-    Minimum vingt classés dans au minimum quatre catégories.
+    ✅ Minimum vingt classés dans au minimum quatre catégories.
 
 Des recettes :
 
-    Minimum vingt classées dans au minimum six catégories.
-
-    Pour les articles et recettes, saisissez au moins quatre contenus originaux de chaque que vous pouvez ensuite dupliquer.
+    ✅ Minimum vingt classées dans au minimum six catégories.
+    ✅ Pour les articles et recettes, saisissez au moins quatre contenus originaux de chaque que vous pouvez ensuite dupliquer.
 
 Il ne vous est pas demandé d'être créatif, donc n'hésitez pas à aller copier/coller des contenus.
 Si vous vous sentez l'âme créative, faites-vous plaisir.

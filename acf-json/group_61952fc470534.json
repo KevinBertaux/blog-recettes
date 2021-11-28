@@ -22,9 +22,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "page"
+                "value": "template-contact.php"
             }
         ]
     ],
@@ -36,5 +36,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1637527539
+    "modified": 1638092114
 }
