@@ -10,7 +10,7 @@ La différence est qu'elle est gratuite et qu'elle ne se manipule pas via une in
 ## Le thème
 
     Le thème est constitué de onze modèles.
-    Tous ces modèles sont constitués de deux zones communes.
+    ✅ Tous ces modèles sont constitués de deux zones communes.
 
 ## L'en-tête
 
@@ -77,7 +77,7 @@ _NB : les "cards" sont les mêmes sur tous les modèles_
 
 ## Page category.html : la liste des articles d'une catégorie
 
-    Ce modèle fonctionne comme blog.html mais n'affiche que les articles liés à la catégorie en question.
+    ✅ Ce modèle fonctionne comme blog.html mais n'affiche que les articles liés à la catégorie en question.
     ✅ Le titre est le nom de la catégorie.
 
 ## Page article.html : un article
