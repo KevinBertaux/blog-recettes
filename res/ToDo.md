@@ -174,9 +174,9 @@ Ce modèle est constitué de :
 
 Le formulaire 
 
-    Le formulaire est fonctionnel.
-    L'auteur du site reçoit le contenu du formulaire.
-    La personne qui a rempli le formulaire reçoit un mail lui indiquant que son message est bien reçu et qu'il sera traité rapidement.
+    ✅ Le formulaire est fonctionnel.
+    ✅ L'auteur du site reçoit le contenu du formulaire.
+    ✅ La personne qui a rempli le formulaire reçoit un mail lui indiquant que son message est bien reçu et qu'il sera traité rapidement.
     ✅ La carte affiche plusieurs marqueurs correspondant à des ateliers cuisine.
     ✅ Au clic sur le marqueur, on affiche le nom et l'adresse de l'atelier.
     ✅ Vous êtes libre de choisir le fournisseur de carte.
@@ -237,23 +237,23 @@ Si vous vous sentez l'âme créative, faites-vous plaisir.
 
 ## Le rendu
 
-    Le site doit être mis en ligne (sur l'hébergement de votre choix, celui fourni par le CEFIM faisant tout à fait l'affaire).
-    Votre site doit être nettoyé des contenus, extensions, thèmes indésirables / inutiles.
-    La configuration du site est faite dans les règles de l'art.
+    ✅ Le site doit être mis en ligne (sur l'hébergement de votre choix, celui fourni par le CEFIM faisant tout à fait l'affaire).
+    ✅ Votre site doit être nettoyé des contenus, extensions, thèmes indésirables / inutiles.
+    ✅ La configuration du site est faite dans les règles de l'art.
     Le SSL est activé.
-    La sécurité est optimisée.
-    Les sauvegardes ne sont pas demandées (mais vous devriez les mettre en place quand même).
+    ✅ La sécurité est optimisée.
+    ✅ Les sauvegardes ne sont pas demandées (mais vous devriez les mettre en place quand même).
     Les images sont automatiquement optimisées après l'upload.
     Les médias sont automatiquement renommés si nécessaire après l'upload.
     Les performances sont optimisées.
     La base de données est optimisée et nettoyée régulièrement.
-    L'indexation du site est désactivée (important).
+    ✅ L'indexation du site est désactivée (important).
     Il n'est pas demandé de mettre en place d'outils de suivi statistiques, de gestion du SEO, ou de gestion RGPD.
-    Créez un compte administrateur au nom de Benoist Lawniczak (blawniczak@cefim.eu).
+    ✅ Créez un compte administrateur au nom de Benoist Lawniczak (blawniczak@cefim.eu).
 
 ### Vous devez rendre :
 
-    Url du site
-    Url de l'administration du site
-    Identifiant et mot de passe de l'administrateur Benoist Lawniczak
-    Url de votre repository GitLab CEFIM
+    ✅ Url du site
+    ✅ Url de l'administration du site
+    ✅ Identifiant et mot de passe de l'administrateur Benoist Lawniczak
+    ✅ Url de votre repository GitLab CEFIM
